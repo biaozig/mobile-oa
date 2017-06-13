@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="applicable-device" content="mobile"/>
+    <title>oA 系统管理平台</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="css/front.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+    
+<div id="box">
+    <header class="header clearfix" style="position: relative">
+        <h1><img src="img/logo.png"/></h1>
+        <div class="slogan" style="position: absolute;top: 50%;margin-top: -9px;left: 50%;margin-left: -75px;"> 
+        </div>
+        <div class="user">
+            <a href="javascript:;" @click="visible=true">
+                <i class="iconfont-p iconfont">&#xe600;</i>
+                <span></span>
+            </a>
+        </div>
+    </header>
+    <!--start 个人中心 -->
+    <section class="layer-shadow fn-hide" :class="{shadowopen:visible}" @click="visible=false"></section>
+    <section class="layer-screening" :class="{screenopen:visible}">
+        <div class="layer-screening-content">
+            <div class="sidebar">
+                <ul>
+                    <li class="headtop" :style="{backgroundColor:'rgba(57,161,234,0.8)',color:'#fff'}">个人中心
+                        <span class="fn-right">
+                            <a class="btn btn-yellow" href="javascript:void(0);" @click="visible=false">关闭</a>
+                        </span>
+                    </li>
+                    <!--start 一级任务 -->
+                    <li class="project-menu">
+                        <ul class="clearfix">
+                            <li class="w-half" v-for="(assItem,index) in assItems" :class="{current:assItem.ToggleShow}" @click="assClick(index)">
+                                <span v-text="assItem.Tip"></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--end 一级任务 -->
+                </ul>
+                <!--start 二级任务 -->
+                <ul class="screening-conditions" v-for="(assItem,a) in assItems" :class="{'fn-hide':assItem.ToggleShow}">
+                    <li class="menu" v-for="(childItem,b) in assItem.assItemsContents">
+                        <aside>{{childItem.assTip}}<span class="font12">（new）</span>
+                            <span class="choose-content">更多</span>
+                            <em><i class="part-arrow-a" @click="partToggle(a,b)"></i></em>
+                        </aside>
+                        <!--start 三级任务 -->
+                        <ul class="sidebar-list" v-show="childItem.childShow">
+                            <li v-for="item in childItem.assChild">
+                                <span v-html="item.assChildName"></span>
+                                <em><i class="icon-chakan1 iconfont"></i></em>
+                            </li>
+                        </ul>
+                        <!--end 三级任务 -->
+                    </li>
+                </ul>
+                <!--end 二级任务 -->
+            </div>
+        </div>
+    </section>
+    <!--end 个人中心 -->
+    <section class="banner clearfix banner-slider">
+        <!--start banner-list -->
+        <!-- <ul class="banner-list">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> -->
+        <!--end banner-list-->
+        <div class="bd">
+            <ul class="bannerpic-list">
+                <li class="clearfix fn-left">
+                    <a href="#"><img src="img/banner1.png"/></a>
+                </li>
+                <li class="clearfix fn-left">
+                    <a href="#"><img src="img/banner2.png"/></a>
+                </li>
+                <li class="clearfix fn-left">
+                    <a href="#"><img src=""/></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="search">
+        <div class="search-content">
+            <div class="fn-left choose-type" id="popup11">搜索<i class="choose-type-icon"></i></div>
+            <div class="content-field">
+                <input type="text" name="k" value="" placeholder="输入关键词..."/>
+                <div id="search_button" class="search-btn">
+                    <a href="javascript:;" class="iconfont-p iconfont">&#xe601;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="nav clearfix">
+        <a href="#">
+            <p class="nav-color-1"><i class="iconfont-f iconfont">&#xe609;</i></p>
+            <span>我的代办</span>
+        </a>
+        <a href="ass-list.html">
+            <p class="nav-color-5"><i class="iconfont-f iconfont">&#xe60d;</i></p>
+            <span>我的任务</span>
+        </a>
+        <a href="schedule.html">
+            <p class="nav-color-2"><i class="iconfont-f iconfont">&#xe60a;</i></p>
+            <span>日程</span>
+        </a>
+        <a href="not-list.html">
+            <p class="nav-color-3"><i class="iconfont-f iconfont">&#xe60b;</i></p>
+            <span>公告</span>
+        </a>
+
+        <a href="new-process.html">
+            <p class="nav-color-8"><i class="iconfont-n iconfont">&#xe604;</i></p>
+            <span>新建流程</span>
+        </a>
+        <a href="new-process.html">
+            <p class="nav-color-4"><i class="iconfont-f iconfont">&#xe60c;</i></p>
+            <span>待办流程</span>
+        </a>
+        <a href="new-process.html">
+            <p class="nav-color-7"><i class="iconfont-n iconfont">&#xe602;</i></p>
+            <span>已办流程</span>
+        </a>
+        <a href="new-process.html">
+            <p class="nav-color-6"><i class="iconfont-f iconfont">&#xe60e;</i></p>
+            <span>流程督办</span>
+        </a>
+
+        <a href="form-list.html">
+            <p class="nav-color-8"><i class="iconfont-n iconfont">&#xe604;</i></p>
+            <span>新建任务</span>
+        </a>
+        <a href="ass-list.html">
+            <p class="nav-color-7"><i class="iconfont-n iconfont">&#xe602;</i></p>
+            <span>相关任务</span>
+        </a>
+        <a href="ass-list.html">
+            <p class="nav-color-6"><i class="iconfont-f iconfont">&#xe60e;</i></p>
+            <span>负责任务</span>
+        </a>
+
+        <a href="ass-list.html">
+            <p class="nav-color-4"><i class="iconfont-f iconfont">&#xe60c;</i></p>
+            <span>分配任务</span>
+        </a>
+
+        <a href="ass-list.html">
+            <p class="nav-color-4"><i class="iconfont-f iconfont">&#xe60c;</i></p>
+            <span>全部分类</span>
+        </a>
+    </nav>
+    <!--start 列表 -->
+    <section class="index-main clearfix">
+        <div class="hd clearfix">
+            <h2><i class="iconfont-f iconfont">&#xe600;</i>新闻资讯</h2>
+            <a href="#">更多
+                <div class="icon-more">
+                    <i class="icon-gengduo iconfont"></i>
+                </div>
+            </a>
+        </div>
+        <div class="menu-nav clearfix">
+            <ul>
+                <li><a href="#">行业动态</a></li>
+                <li><a href="#">公司新闻</a></li>
+                <li><a href="#">我的任务</a></li>
+                <li><a href="#">公司新闻</a></li>
+            </ul>
+        </div>
+        <div class="banner clearfix banner-slider fn-hide">
+            <div class="hd">
+                <p class="banner-shadow"></p>
+                <ul class="banner-list">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="index-list">
+            <dl>
+                <dt><a href="#">[行业动态]</a></dt>
+                <dd><a href="#">上海某智能升降景观灯项目股权融资300万元</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">[公司新闻]</a></dt>
+                <dd><a href="#">内蒙古某房地产公司二期项目融资2亿元</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">[行业动态]</a></dt>
+                <dd><a href="#">上海某智能升降景观灯项目股权融资300万元</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">[公司新闻]</a></dt>
+                <dd><a href="#">内蒙古某房地产公司二期项目融资2亿元</a></dd>
+            </dl>
+        </div>
+    </section>
+    <!--end 列表 -->
+    <footer class="full-footer full-footer-placeholder clearfix">
+        <section>
+            <a style="color: #ff6400;" href="login.html">登录</a>
+            <a href="#">注册</a>
+            <a href="#" class="right">关于我们></a>
+        </section>
+    </footer>
+    <div class="to-fixed fn-hide">
+        <section class="to-top-fixed">
+            <a href="javascript:void(0):;">
+                <aside></aside>
+                <article>返回顶部</article>
+            </a>
+        </section>
+    </div>
+</div>
+
+<script src="js/vue/dist/vue.min.js"></script>
+<script src="js/vue-resource/dist/vue-resource.min.js"></script>
+<script>
+    new Vue({
+        el: '#box',
+        data: {
+            visible : false,
+            state : false,
+            assItems : []
+        },
+        mounted:function(){
+            //  默认状态 
+            var _this = this;
+            this.viewData();
+        },
+        methods: {
+            viewData : function(){
+                this.$http.get("resource.json").then(function(response,err){
+                    var res = response.data;
+                    if(res){
+                        this.assItems = res.assItems;
+                    }else{
+                        throw err;
+                    }
+                })
+            },
+            assClick: function(i) {
+                this.assItems.forEach(function(e){
+                    e.ToggleShow=false;
+                });
+                this.assItems[i].ToggleShow=true;
+            },
+            partToggle: function(x,y){
+                this.assItems[x].assItemsContents[y].childShow=!this.assItems[x].assItemsContents[y].childShow;
+            }
+
+        }
+    });
+</script>
+</body>
+</html>

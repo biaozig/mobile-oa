@@ -1,0 +1,134 @@
+﻿
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="applicable-device" content="mobile"/>
+    <title>找回密码 | 移动oA系统</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link href="css/front.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header class="full-header">
+    找回密码
+    <a href="http://m.trjcn.com" class="iconleft iconfont-f iconfont">&#xe604;</a>
+</header>
+<section class="register-content">
+    <div class="fn-mb-10">
+        <p>
+            <span class="icon-field"><i class="iconfont-p iconfont">&#xe605;</i></span>
+            <span class="input-field"><input type="text" id="mobile" name="mobile" value="" placeholder="手机号" class="input-style"></span>
+        </p>
+        <article id="mobile_tip"></article>
+    </div>
+    <div class="verification clearfix fn-mb-10">
+        <div class="clearfix">
+            <p>
+                <span class="icon-field"><i class="iconfont-f iconfont">&#xe605;</i></span>
+                <span class="input-field"><input type="text" id="sms_code" name="mobilecode" value="" placeholder="短信验证码" class="input-style"></span>
+            </p>
+            <a href="javascript:;" class="btn-code" id="getcode">获取验证码</a>
+        </div>
+        <article id="sms_code_tip"></article>
+    </div>
+    <div class="clearfix">
+        <a href="javascript:void(0);" id="forgetSubmit" class="btn-big btn-yellow fn-mt-20">下一步</a>
+    </div>
+</section>
+<style>#seo_menu a{display:none;}</style>
+<footer class="full-footer clearfix">
+    <section>
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
+        <!-- <a href="service.html" class="right">投融服务</a> -->
+    </section>
+    <div style="color:#eee;height:0;" id="seo_menu">
+    </div>
+    <article>
+        <!-- <p class="version clearfix">
+        <a class="touch" href="http://m.trjcn.com">触屏版</a>
+        <a href="http://www.trjcn.com">电脑版</a>
+        <a href="http://m.trjcn.com/about.html">关于我们</a>
+        </p> -->
+        <p class="copyright">Copyright ©2017 ICP经营许可证:浙B2-20130239<br/>版权所有：河南电联通信技术有限公司<br/>地址：河南省郑州市金水区北三环文化路瀚海北金A座7010室
+        </p>
+        <!-- <p class="tel-bottom">联系电话：0571-56132500</p> -->
+    </article>
+</footer>
+<div class="to-fixed fn-hide">
+    <section class="to-top-fixed">
+        <a href="##">
+            <aside></aside>
+            <article>返回顶部</article>
+        </a>
+    </section>
+    <section class="to-home">
+        <a href="http://m.trjcn.com">
+            <aside></aside>
+            <article><i class="iconfont-p iconfont">&#xe611;</i></article>
+        </a>
+    </section>
+</div>
+<section class="to-top"></section>
+<section class="to-nav"></section>
+<section class="zhezhao fn-hide"></section>
+<nav class="nav clearfix fpos fn-hide" id="f-nav">
+    <a href="http://m.trjcn.com">
+        <p class="nav-color-0"><i class="iconfont-f iconfont">&#xe604;</i></p>
+        <span>首页</span>
+    </a>
+    <a href="http://wapzijin.trjcn.com">
+        <p class="nav-color-1"><i class="iconfont-f iconfont">&#xe609;</i></p>
+        <span>找资金</span>
+    </a>
+    <a href="http://wapxiangmu.trjcn.com">
+        <p class="nav-color-2"><i class="iconfont-f iconfont">&#xe60a;</i></p>
+        <span>选项目</span>
+    </a>
+    <a href="http://wapzhiku.trjcn.com/list_1806.html">
+        <i class="nav-i"></i>
+        <span>商业计划书</span>
+    </a>
+    <a href="http://waphuodong.trjcn.com">
+        <p class="nav-color-3"><i class="iconfont-f iconfont">&#xe60b;</i></p>
+        <span>活动</span>
+    </a>
+    <a href="http://wapzhiku.trjcn.com/list_180201.html">
+        <p class="nav-color-8"><i class="iconfont-n iconfont">&#xe604;</i></p>
+        <span>成功案例</span>
+    </a>
+    <a href="http://wapnews.trjcn.com/list_73.html">
+        <p class="nav-color-7"><i class="iconfont-n iconfont">&#xe602;</i></p>
+        <span>融资报告</span>
+    </a>
+    <a href="http://wapzhiku.trjcn.com">
+        <p class="nav-color-6"><i class="iconfont-f iconfont">&#xe60e;</i></p>
+        <span>投融学院</span>
+    </a>
+    <a href="http://m.trjcn.com/service.html">
+        <p class="nav-color-4"><i class="iconfont-f iconfont">&#xe60c;</i></p>
+        <span>投融服务</span>
+    </a>
+</nav>
+
+<div style="display:none;"></div>
+<div class="pop_box" direction="" dialogobj="" widget="dialog">
+    <div class="dialog-all-m fn-hide" widget="container" id="trj_verify_dialog">
+        <div class="part-dialog-b" widget="body">
+            <div widget="content">
+                <h4>请输入验证码</h4>
+                <div class="ub"><input id="dialog_verify_code" name="code" maxlength="4" type="number" style="ime-mode: disabled;text-align:left">
+                    <img alt="captcha" id="verify_yzimg">
+                </div>
+                <div class="fn-mb-5 ui-text-red-2 fn-font-12" id="dialog_verify_tip"></div>
+            </div>
+            <footer class="fn-pt-5" widget="buttons"></footer>
+        </div>
+    </div>
+</div>
+</body>
+</html>

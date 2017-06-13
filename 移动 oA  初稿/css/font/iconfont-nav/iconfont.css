@@ -1,0 +1,6 @@
+@font-face {font-family: "iconfont-nav";
+  src:  url('iconfont.ttf') format('truetype');
+}
+.iconfont-nav{
+  font-family:"iconfont-nav" !important;
+}

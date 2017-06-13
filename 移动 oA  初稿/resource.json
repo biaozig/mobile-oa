@@ -1,0 +1,49 @@
+{
+    "assItems": [
+    {   "Tip": "我的任务",
+        "ToggleShow": true,
+        "assItemsContents": [{
+            "assTip": "我的普通任务",
+            "assChild": [{
+                "assChildName": "<a href='#' >第111个任务</a>"
+            }, {
+                "assChildName": "<a href='#' >第yyy个任务</a>"
+            }],
+            "childShow": false
+        }, {
+            "assTip": "我的特别任务",
+            "assChild": [{
+                "assChildName": "第eee个任务",
+                "assChildDetail": "查看任务111详情"
+            }, {
+                "assChildName": "第222个任务",
+                "assChildDetail": "查看任务222详情"
+            }],
+            "childShow": false
+        }]
+    }, 
+    {   "Tip": "我的待办",
+        "ToggleShow": false,
+        "assItemsContents": [{
+            "assTip": "待办普通任务",
+            "assChild": [{
+                "assChildName": "第111个任务",
+                "assChildDetail": "查看任务1详情"
+            }, {
+                "assChildName": "第yyy个任务",
+                "assChildDetail": "查看任务2详情"
+            }],
+            "childShow": false
+        }, {
+            "assTip": "待办特别任务",
+            "assChild": [{
+                "assChildName": "第eee个任务",
+                "assChildDetail": "查看任务111详情"
+            }, {
+                "assChildName": "第222个任务",
+                "assChildDetail": "查看任务222详情"
+            }],
+            "childShow": false
+        }]
+    }]
+}

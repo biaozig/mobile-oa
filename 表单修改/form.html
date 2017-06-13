@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="applicable-device" content="pc,mobile"/>
+	<title>Document</title>
+
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css" media="(min-width:769px)">
+    <link rel="stylesheet" type="text/css" href="bootstrap-custom.css" media="(min-width:769px)">
+    <link rel="stylesheet" type="text/css" href="custom-table.css">
+
+</head>
+<body>
+    <div class="header">
+        <h3>
+            <a href="javascript:history.go(-1);" class="mb-show iconleft icon-msnui-menu-left iconfont"></a>
+            请假信息
+            <a href="index.html" class="mb-show iconright iconfont-p iconfont"></a>
+        </h3>
+    </div>
+	<form>
+        <div class="clearfix">
+            <div class="form-w50">
+                <table class="table-w100">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="fl">申请人</span>
+                                <input type="text" class="text fr" readonly data-variable="applyUserName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fl">请假类别</span>
+                                <div class="text fr">
+                                    <select data-variable="leaveType">
+                                        <option value="事假">事假</option>
+                                        <option value="年假">年假</option>
+                                        <option value="病假">病假</option>
+                                        <option value="探亲假">探亲假</option>
+                                        <option value="婚假">婚假</option>
+                                        <option value="产假">产假</option>
+                                        <option value="陪产假">陪产假</option>
+                                        <option value="丧假">丧假</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <span class="fl">开始时间</span>
+                            <input type="text" data-variable="startTime" class="text fr Wdate inputAuth startTimeAuth" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-w50">
+                <table class="table-w100">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="fl">部门</span>
+                                <input type="text" class="text fr" readonly="readonly" data-variable="applyUserDeptName">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fl">扣假形式</span>
+                                <div class="text fr">
+                                    <select data-variable="leaveMode">
+                                        <option value="扣薪">扣薪</option>
+                                        <option value="倒休">倒休</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fl">结束时间</span>
+                                <input type="text" data-variable="endTime" class="text fr Wdate inputAuth endTimeAuth" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <span class="fl">请假时间备注</span>
+                        <input type="text" data-variable="leaveRemark" class="text fr textAuth">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="fl">部门领导审核</span>
+                        <div class="text fr">
+                            <select data-variable="pass1" class="audit">
+                                <option value="true">同意</option>
+                                <option value="false">不同意</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                      <span class="fl mb-hide"></span>
+                        <div class="text fr">
+                            <textarea class="audit" rows="6" data-variable="passRemark1" readonly="readonly" style="margin: 0px; width: 100%; resize:none"></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="fl">总经理审批</span>
+                        <div class="text fr">
+                            <select data-variable="pass2" class="audit">
+                                <option value="true">同意</option>
+                                <option value="false">不同意</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                      <span class="fl mb-hide"></span>
+                        <div class="text fr">
+                            <textarea class="audit" rows="6" data-variable="passRemark2" readonly="readonly" style="margin: 0px; width: 100%; resize:none"></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="fl">董事长审核</span>
+                        <div class="text fr">
+                            <select data-variable="pass3" class="audit">
+                                <option value="true">同意</option>
+                                <option value="false">不同意</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                      <span class="fl mb-hide"></span>
+                        <div class="text fr">
+                            <textarea class="audit" rows="6" data-variable="passRemark3" readonly="readonly" style="margin: 0px; width: 100%; resize:none"></textarea>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+</body>
+</html>

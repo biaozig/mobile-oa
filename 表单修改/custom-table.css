@@ -1,0 +1,160 @@
+/*--费用表单--*/
+@import 'font/iconfont-add/iconfont.css';
+@import 'font/iconfont-p/iconfont.css';
+
+.header{ width: 96%;padding: 0px 3%;margin: 0 auto;}
+.header h3{border-bottom:2px solid #0482d4;color: #5187dd;margin-bottom:10px;}
+form{width: 96%;padding: 0px 2%; margin:0 auto;margin-bottom: 30px;}
+// form .borrow{display:none;height: 26px;line-height: 26px;padding-left: 40px;color: #ff0000;font-weight: bold}
+// form h2 p{width: 100%;text-align: center;font-size:16px;}
+form table{width: 100%;margin:0 auto;margin-bottom:10px;}
+form table thead th{border:1px solid #fff;font-weight: normal;}
+form table tbody td{height:40px;border:0;padding:0 10px;}
+form table span{display: inline-block;color: #5187dd;letter-spacing:0.2em;}
+form table input.text{display: inline-block;width: calc(100% - 140px);min-width:150px;padding-left:6px;height: 26px;border:none;border-bottom: 1px solid #b7b7b7;outline: none;}
+form table div.text{width: calc(100% - 140px);min-width:150px;text-align: left;border:0;margin-left:30px;}
+form table div.text b{margin-left:5px;}
+form table div.text select{width: 120px;}
+
+form table tbody span.all_upload{position: relative;overflow:hidden;width: 90px;height: 25px;padding-left: 15px;text-align: center;line-height: 25px;background: url(../images/MyDoc_wev8.png) no-repeat 4px center #1e93f5;color: #fff;margin-right: 15px;background-size:14px 14px;}
+form table tbody span.all_upload input[type="file"]{position: absolute;left: 0;top:0;width: 105px;height: 25px;opacity: 0;}
+form table tbody span.all_delete{width: 90px;height: 25px;padding-left: 15px;text-align: center;line-height: 25px;background: url(../images/16_close2_wev9.png) no-repeat 4px center #dfdfdf;background-size:14px 14px;color: #808080;}
+form table.bot{width: 100%;background: #fff;}
+form table.bot thead th{background: #6c9feb;border-right: 1px solid #fff;font-weight: bold;color: #fcffff;text-align:center;}
+form table.bot tbody td{height: 30px;border-right: 1px solid #efefef;text-align:center;}
+form table.bot tbody td input[type="text"]{border: 0;width: 145px;}
+form table.bot tbody td input[type="checkbox"]{margin:0 6px;}
+form table.bot tfoot tr:first-child td{height: 24px;text-align: center;background: #6c9feb;}
+form table.bot tfoot tr:first-child td span{color: #fff;font-weight: bold;}
+form table.bot tfoot tr:last-child{border:1px solid #fcffff;}
+form table.bot tfoot tr:last-child td{border-right:1px solid #fcffff;}
+form table.bot tfoot tr:last-child td span{display: inline-block;width: 100px;height: 40px;text-align: center;line-height: 40px;background: #6c9feb;font-weight:bold;color: #ffffff;}
+form table.bot tfoot tr:last-child td:last-child{border-right:1px solid #efefef;}
+form p{width:92%;padding-left:4%;}
+form p span{color:#111;}
+form p a.bt{color:#1768f8}
+form p a.yl{color:#1b1b1b;margin-left:5px;}
+form p a:hover{text-decoration:underline;}
+form p a.yl:hover{color:#f33;}
+
+table div.filename{width: calc(100% - 100px);height: 20px;line-height: 20px;color: #a0a0a0;border-bottom: 1px solid #dcdcdc;}
+table div.filename span{display: inline-block;padding-left: 20px;padding-bottom:5px;height:20px;background: url(../images/tag.png) no-repeat;}
+table div.filename span i{display: inline-block;width:12px;height: 20px;background: url(../images/del_bg.png) no-repeat right 3px;cursor: pointer;}
+
+
+/* 适配移动端 */ 
+.form-w50 {
+    width: 50%;
+    float: left;
+}
+.form-w50 .table-w100 {
+    width: 100%;
+}
+.mb-show {
+    display: none;
+}
+a.iconleft {
+    position: absolute;
+    top: 0px;
+    left: 7px;
+    padding: 0 5px;
+    color: #999999;
+}
+a.iconright {
+    position: absolute;
+    top: 0;
+    right: 7px;
+    padding: 0 5px;
+    color: #999999;
+}
+input,
+textarea {
+    background-color: #fff;
+}
+input[readonly],
+textarea[readonly] {
+    background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        padding: 0px;
+        font-size: 12px;
+    }
+    body {
+	    background-color: #fff;
+	}
+    a{
+    	text-decoration: none;
+    }
+    .mb-show {
+        display: block;
+    }
+    .mb-hide {
+        display: none;
+    }
+    .header h3 {
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        border-bottom: 1px solid #eeeeee;
+    }
+    form {
+        padding-top: 20px;
+    }
+    form table tbody td {
+        padding: 0px;
+    }
+    .form-w50 {
+        width: 100%;
+        float: none;
+    }
+    /* input,textarea */
+    form table tr {}
+    form table span {
+        display: inline-block;
+        text-align: center;
+        line-height: 24px;
+        background-color: #eeeeee;
+        border-radius: 4px;
+        margin: 5px 0px;
+        padding: 2px 8px;
+        color: #666;
+    }
+    form table div.text {
+        position: relative;
+        width: 100%;
+        line-height: 20px;
+        margin-left: 0px;
+    }
+    form table div.text select {
+        position: absolute;
+        top: -30px;
+        right: 2%;
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+        background-color: #6a7ebd;
+        border-color: #cfcfcf;
+        border-radius: 4px;
+        color: #fff;
+    }
+    form table input.text {
+        width: 98%;
+        height: 30px;
+        margin: 5px 1%;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        background-color: #fefefe;
+    }
+    input,
+    textarea {
+        width: 95%;
+        margin: 0px 2%;
+        border-color: #ddd;
+    }
+

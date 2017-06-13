@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="applicable-device" content="mobile"/>
+    <title>登录</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link href="css/front.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+</head>
+<body>
+<header class="full-header">
+    账号登录
+    <a href="index.html" class="iconleft iconfont-f iconfont">&#xe604;</a>
+</header>
+<div class="login-style clearfix">
+    <ul class="tabmenu-list login clearfix">
+        <li class="active">普通账号登录</li>
+        <li>手机验证码登录</li>
+    </ul>
+</div>
+<section class="register-content">
+    <form id="frmLogin" name="frmLogin" method="post">
+        <div class="fn-mb-10">
+            <p>
+                <span class="icon-field"><i class="iconfont-p iconfont">&#xe605;</i></span>
+                <span class="input-field"><input type="text" id="username" name="username" value="" placeholder="手机号" class="input-style"></span>
+            </p>
+            <article id="username_unhappy"></article>
+        </div>
+        <div class="fn-mb-10">
+            <p>
+                <span class="icon-field"><i class="iconfont-p iconfont">&#xe604;</i></span>
+                <span class="input-field"><input type="password" id="password" name="password" value="" placeholder="密码" class="input-style"></span>
+            </p>
+            <article id="password_unhappy"></article>
+        </div>
+        <div class="verification clearfix fn-mb-10 fn-hide">
+            <div class="clearfix">
+                <p class="register-code">
+                    <span class="input-field"><input type="text" id="login_yzcode" name="login_yzcode" value="" placeholder="验证码" class="input-style"></span>
+                </p>
+                <p class="btn-code">
+                    <a href="#" class=" block ml5">
+                        <img src='http://m.trjcn.com/login/captcha.html' onclick="this.src='http://m.trjcn.com/login/captcha.html?'+Math.random()" width="100%" height="40" alt="captcha" id="yzimg">
+                    </a>
+                </p>
+            </div>
+            <article id="login_yzcode_unhappy"></article>
+        </div>
+        <div class="clearfix">
+            <a href="##" id="btn_normal_login" class="btn-big btn-yellow">登录</a>
+            <div class="clearfix forget-pass">
+                <a href="forget.html" class="fn-left">忘记密码？</a>
+                <a href="register.html" class="fn-right">新用户免费注册</a>
+            </div>
+        </div>
+    </form>
+</section>
+<section class="register-content fn-hide">
+    <div class="fn-mb-10">
+        <p>
+            <span class="icon-field"><i class="iconfont-p iconfont">&#xe605;</i></span>
+            <span class="input-field"><input type="text" id="mobile" name="mobile" value="" placeholder="手机号" class="input-style"></span>
+        </p>
+        <article id="mobile_tip"></article>
+    </div>
+    <div class="verification clearfix fn-mb-10">
+        <div class="clearfix">
+            <p>
+                <span class="icon-field"><i class="iconfont-f iconfont">&#xe605;</i></span>
+                <span class="input-field"><input type="text" id="sms_code" name="code" value="" placeholder="短信验证码" class="input-style"></span>
+            </p>
+            <a href="##" class="btn-code J-send-sms-button">获取验证码</a>
+        </div>
+        <article id="send_sms_tip"></article>
+    </div>
+    <div class="clearfix">
+        <a href="##" id="btn-mobile-login" class="btn-big btn-yellow">登录</a>
+        <div class="clearfix forget-pass">
+            <a href="http://m.trjcn.com/register.html" class="fn-right">新用户免费注册</a>
+        </div>
+    </div>
+</section>
+<style>#seo_menu a{display:none;}</style>
+<footer class="full-footer clearfix">
+    <section>
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
+
+    </section>
+    <div style="color:#eee;height:0;" id="seo_menu">
+    </div>
+    <article>
+        <!-- <p class="version clearfix">
+        <a class="touch" href="http://m.trjcn.com">触屏版</a>
+        <a href="http://www.trjcn.com">电脑版</a>
+        <a href="http://m.trjcn.com/about.html">关于我们</a>
+        </p> -->
+        <p class="copyright">Copyright ©2017 ICP经营许可证:浙B2-20130239<br/>版权所有：河南电联通信技术有限公司<br/>地址：河南省郑州市金水区北三环文化路瀚海北金A座7010室
+        </p>
+        <!-- <p class="tel-bottom">联系电话：0571-56132500</p> -->
+    </article>
+</footer>
+<div class="to-fixed fn-hide">
+    <section class="to-top-fixed">
+        <a href="##">
+            <aside></aside>
+            <article>返回顶部</article>
+        </a>
+    </section>
+    <section class="to-home">
+        <a href="http://m.trjcn.com">
+            <aside></aside>
+            <article><i class="iconfont-p iconfont">&#xe611;</i></article>
+        </a>
+    </section>
+</div>
+<section class="to-top"></section>
+<section class="to-nav"></section>
+<section class="zhezhao fn-hide"></section>
+<nav class="nav clearfix fpos fn-hide" id="f-nav">
+    <a href="http://m.trjcn.com">
+        <p class="nav-color-0"><i class="iconfont-f iconfont">&#xe604;</i></p>
+        <span>首页</span>
+    </a>
+    <a href="http://wapzijin.trjcn.com">
+        <p class="nav-color-1"><i class="iconfont-f iconfont">&#xe609;</i></p>
+        <span>找资金</span>
+    </a>
+    <a href="http://wapxiangmu.trjcn.com">
+        <p class="nav-color-2"><i class="iconfont-f iconfont">&#xe60a;</i></p>
+        <span>选项目</span>
+    </a>
+    <a href="http://wapzhiku.trjcn.com/list_1806.html">
+        <i class="nav-i"></i>
+        <span>商业计划书</span>
+    </a>
+    <a href="http://waphuodong.trjcn.com">
+        <p class="nav-color-3"><i class="iconfont-f iconfont">&#xe60b;</i></p>
+        <span>活动</span>
+    </a>
+    <a href="http://wapzhiku.trjcn.com/list_180201.html">
+        <p class="nav-color-8"><i class="iconfont-n iconfont">&#xe604;</i></p>
+        <span>成功案例</span>
+    </a>
+    <a href="http://wapnews.trjcn.com/list_73.html">
+        <p class="nav-color-7"><i class="iconfont-n iconfont">&#xe602;</i></p>
+        <span>融资报告</span>
+    </a>
+    <a href="http://wapzhiku.trjcn.com">
+        <p class="nav-color-6"><i class="iconfont-f iconfont">&#xe60e;</i></p>
+        <span>投融学院</span>
+    </a>
+    <a href="http://m.trjcn.com/service.html">
+        <p class="nav-color-4"><i class="iconfont-f iconfont">&#xe60c;</i></p>
+        <span>投融服务</span>
+    </a>
+</nav>
+<!-- <script type="text/javascript" src="js/sea.js"></script>
+<script>
+	var _global={
+		base_url:'http://m.trjcn.com',
+		api_url:'http://m.trjcn.com',
+		assets_url:'http://m.trjcn.com/assets/wap',
+		xiangmu_url:'http://wapxiangmu.trjcn.com',
+		zijin_url:'http://wapzijin.trjcn.com'
+	};
+
+	var Trjcn={
+		LoginID:'',
+		cache:{},
+		Util: {
+			isMobile: function (mobile) {
+				return isMobile(mobile);
+			}
+		}
+	};
+	var ENVIRONMENT = 'production';
+	var basePath = '/';
+	var staticPath = '/assets/wap/scripts';
+	var href = location.href;
+	if (ENVIRONMENT == 'development'){
+	    staticPath = '/assets/wap/scripts';
+	    if (href.indexOf('file:///') > -1){
+	        staticPath = href.substring(0,href.indexOf(staticPath))+staticPath;
+	    }
+	}
+	seajs.config({
+	    paths: {
+	        "component": staticPath + "/components",
+	        "member": staticPath + "/member",
+	        "home": staticPath + "/home",
+	        "vendor":staticPath+"/vendor"
+	    },
+	    alias: {
+	        "jquery": staticPath+"/lib/jquery"
+	    },
+	    shim:{
+	        "jquery":{
+	            exports: "jQuery"
+	        }
+	    }
+	});
+	seajs.use('jquery',function($){
+        //页面加载遮罩层
+        $('#loading-div').fadeOut();
+
+        $("section.to-nav").click(function(){
+            $("section.zhezhao").show();
+            $("#f-nav").show();
+        })
+        $("section.zhezhao").click(function(){
+            $("#f-nav").hide();
+            $("section.zhezhao").hide();
+        })
+
+        var to_top = $("section.to-top");
+        $(window).scroll(function(){
+            if($(window).scrollTop()>100){
+                to_top.off('click').on('click',function(){
+                    $('body,html').animate({scrollTop:0},500);
+                    return false;
+                });
+                to_top.show();
+            }else{
+                to_top.hide();
+            }
+        });
+    });
+</script> -->
+<div style="display:none;">
+    <!-- <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?15475ebc18720e423b30f9957dd623f0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script> -->
+</div><div class="pop_box" direction="" dialogobj="" widget="dialog">
+    <div class="dialog-all-m fn-hide" widget="container" id="trj_verify_dialog">
+        <div class="part-dialog-b" widget="body">
+            <div widget="content">
+                <h4>请输入验证码</h4>
+                <div class="ub"><input id="dialog_verify_code" name="code" maxlength="4" type="number" style="ime-mode: disabled;text-align:left">
+                    <img alt="captcha" id="verify_yzimg">
+                </div>
+                <div class="fn-mb-5 ui-text-red-2 fn-font-12" id="dialog_verify_tip"></div>
+            </div>
+            <footer class="fn-pt-5" widget="buttons"></footer>
+        </div>
+    </div>
+</div>
+<!-- <script>
+var forward_url = '/';
+var login_error_num = 0;
+var base_url='http://m.trjcn.com';
+seajs.use(['jquery','home/register','component/mobile_verify_code'],function($,app,mobile_verify_code){
+	app.login(base_url,forward_url,login_error_num);
+	mobile_verify_code.listen({
+		handler:{
+			mobile:'#mobile',
+			sms_code:'#sms_code',
+			send_sms_button:'.J-send-sms-button',
+			mobile_tip:'#mobile_tip',
+			send_sms_tip:'#send_sms_tip'
+		},
+		url:"http://m.trjcn.com/ajax/mobile_code/login.json",
+		css:{
+			send_disable:''
+		}
+	});
+});
+</script> -->
+</body>
+</html>

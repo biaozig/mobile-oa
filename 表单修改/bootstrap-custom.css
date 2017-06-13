@@ -1,0 +1,136 @@
+/* body {
+    font-size: 0.75em;
+} */
+
+.container-head {
+    position: relative;
+    width: 98%;
+    height: 70px;
+    padding-top: 13px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.container-main {
+    width: 98%;
+}
+
+.container-head img {
+    margin-right: 10px;
+}
+
+.container-head p {
+    color: #030303;
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+
+.container-head ul {
+    position: absolute;
+    top: 35px;
+    left: 15px;
+}
+
+.container-head ul li {
+    list-style: none;
+}
+
+.container-head ul li a {
+    color: #5a3e35;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    padding: 0px 8px;
+    border-right: 1px solid #b9d9f3;
+}
+
+.container-head ul li:last-child a {
+    border: none;
+}
+
+.container-head ul li a:hover {
+    color: #3d96f7;
+}
+
+.container-head .operate {
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+}
+
+.container-head .operate .my_custom_operate {font: 13px Arial;width: 50px;height: 22px;background: #fff;border: 1px solid #b1cced;color: #2fb5ff;}
+
+.footer{display:inline-block;position: fixed;right:10px;bottom:60px;}
+
+.fl {float: left;}
+
+.fr {float: right;}
+
+.title-custom {
+    padding: 5px 0px 10px 0px;
+}
+
+.custom_form {
+    width: 80%;
+    min-width: 600px;
+    margin: 20px auto;
+    margin-bottom: 30px;
+}
+
+.custom_form table {
+    width: 100%;
+    margin: 0 0 10px 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    font-size: 13px;
+    font-family: '宋体';
+}
+
+.custom_form table tbody td {
+    height: 36px;
+    border: 0;
+    padding: 0 20px;
+}
+
+.custom_form table span {
+    display: inline-block;
+    color: #777;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+}
+
+.custom_form table input.text {
+    width: calc(100% - 100px);
+    min-width: 150px;
+    padding-left: 6px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid #b7b7b7;
+    outline: none;
+}
+
+.custom_form table tbody h3 {
+    border-bottom: 2px solid #5187dd;
+    color: #5187dd;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-family: '宋体';
+}
+
+.custom_form table textarea.text {
+    width: 99%;
+    height: 200px;
+    border-color: #dfdfdf;
+    padding: 5px;
+}
+
+.modal-body {
+    max-height: 352px;
+}
+
+.list-group,.col-sm-5 {
+    padding-left: 15px;
+    padding-right: 0px;
+    background-color: #efefef;
+    max-height: 335px;
+    overflow: auto;
+}
