@@ -1,0 +1,6 @@
+@font-face {font-family: "iconfont-h";
+  src:  url('iconfont.ttf') format('truetype');
+}
+.iconfont-h{
+  font-family:"iconfont-h" !important;
+}
